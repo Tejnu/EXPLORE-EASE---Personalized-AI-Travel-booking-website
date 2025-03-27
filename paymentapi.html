@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Maps Transit &amp; Razorpay Integration</title>
+    <style>
+      #payment-button {
+        padding: 10px 20px;
+        background-color: #008CBA;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Google Maps Transit Directions</h1>
+    <div id="map"></div>
+
+    <h1>Razorpay Payment</h1>
+    <button id="payment-button">Pay Now</button>
+
+    
+    <!-- Razorpay Checkout Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script>
+      
+
+      // Razorpay Payment Integration
+      document.getElementById('payment-button').onclick = function (e) {
+        var options = {
+          "key": "rzp_test_TTSlEMIX7uzTBh", // Replace with your Razorpay key ID
+          "amount": "50000", // Amount in paise (50000 paise = INR 500)
+          "currency": "INR",
+          "name": "Your Company Name",
+          "description": "Test Transaction",
+          "image": "https://yourdomain.com/your_logo.jpg", // Optional: replace with your logo URL
+          // "order_id": "order_9A33XWu170gUtm", // Optional: if you have generated an order_id
+          "handler": function (response) {
+            alert("Payment successful! Razorpay Payment ID: " + response.razorpay_payment_id);
+          },
+          "prefill": {
+            "name": "Test User",
+            "email": "test.user@example.com",
+            "contact": "9999999999"
+          },
+          "notes": {
+            "address": "Some Address"
+          },
+          "theme": {
+            "color": "#3399cc"
+          }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+        e.preventDefault();
+      };
+    </script>
+  </body>
+</html>
