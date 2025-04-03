@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Train Booking System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Train Booking System</h1>
+    <div class="search-form">
+      <form action="/search" method="post">
+        <div class="form-group">
+          <label for="source">From:</label>
+          <input type="text" id="source" name="source" placeholder="Enter source station" required>
+        </div>
+        <div class="form-group">
+          <label for="destination">To:</label>
+          <input type="text" id="destination" name="destination" placeholder="Enter destination station" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Travel Date:</label>
+          <!-- Placeholder clearly shows expected format (yyyy-mm-dd) -->
+          <input type="date" id="date" name="date" placeholder="yyyy-mm-dd" required>
+        </div>
+        <button type="submit" class="btn">Search Trains</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

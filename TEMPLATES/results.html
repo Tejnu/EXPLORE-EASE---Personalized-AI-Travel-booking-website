@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Train Search Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Search Results for {{ trains[0].travelDate if trains else '' }}</h1>
+    
+    {% if message %}
+      <div class="alert">{{ message }}</div>
+    {% endif %}
+    
+    {% if trains %}
+      <div class="train-list">
+        {% for train in trains %}
+          <div class="train-card">
+            <h2>{{ train.trainNumber }} - {{ train.trainName }}</h2>
+            <p><strong>From:</strong> {{ train.stationFrom }}</p>
+            <p><strong>To:</strong> {{ train.stationTo }}</p>
+            <p><strong>Departure:</strong> {{ train.departureTime }}</p>
+            <p><strong>Arrival:</strong> {{ train.arrivalTime }}</p>
+            <p><strong>Seats (1A):</strong> {{ train.seatAvailability }}</p>
+            <button class="btn book-btn">Book Now</button>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No train results to display.</p>
+    {% endif %}
+    
+    <a href="/" class="btn back-btn">Search Again</a>
+  </div>
+</body>
+</html>
