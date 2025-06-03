@@ -1,0 +1,106 @@
+/* hotelcssstyle.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #003580;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #003580;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.7rem;
+    background-color: #0071c2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+.hotel {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+}
+
+.hotel:last-child {
+    border-bottom: none;
+}
+
+.hotel h2 {
+    margin: 0;
+}
+
+.hotel p {
+    margin: 0.5rem 0;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: #e7f0fd;
+    color: #003580;
+    padding: 0.3rem 0.5rem;
+    margin: 0.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.message {
+    color: red;
+    font-weight: bold;
+}
+
+a {
+    color: #0071c2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

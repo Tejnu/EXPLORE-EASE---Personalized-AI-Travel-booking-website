@@ -1,0 +1,23 @@
+[images]
+  remote_images = ["https://source.unsplash.com/**", "https://images.unsplash.com/**", "https://ext.same-assets.com/**", "https://ugc.same-assets.com/**", "https://accounts.google.com/**"]
+
+[build]
+  command = "next build"
+  publish = ".next"
+
+[dev]
+  command = "bun run dev"
+  port = 3000
+  targetPort = 3000
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  included_files = ["bun.lockb"]
+
+# ExploreEase project info
+[project]
+  name = "ExploreEase"
+  description = "A project to explore ease of use."
+  version = "1.0.0"
