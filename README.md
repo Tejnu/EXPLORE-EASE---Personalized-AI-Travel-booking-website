@@ -108,7 +108,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 👥 Team
 
-- **Bhanuteja** – Project Lead & AI Integration
+- **Bhanuteja** – Project Lead , AI Integration & frontend Development
 - **Santhosh** – Backend Development & System Architecture
 - **Shubham** – Frontend Development & UI/UX Design
 - **Yashika** – Data Collection & User Experience
